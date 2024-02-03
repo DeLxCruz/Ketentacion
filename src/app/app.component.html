@@ -2,3 +2,20 @@
   Hola Carepicha!
   hola x2
 </h1>
+
+<app-title title="Inventario" customClasses="font-bold pl-2 text-4xl "/>
+<app-input
+  icon="https://www.svgrepo.com/show/532555/search.svg"
+  placeholder="Buscar"
+  [classesDiv]="'flex py-1 pl-2 pr-5 w-fit rounded-lg shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
+  [classesIcon]="'mx-3 w-4'"
+  [classesInput]="'ml-3 py-1 focus:outline-none'">
+</app-input>
+
+<app-button
+  icon="https://www.svgrepo.com/show/524226/add-circle.svg"
+  text="Agregar Item"
+  [classesButton]="'px-3 py-2 flex items-center bg-green-600 text-white py-1 px-3 rounded-md shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
+  [classesIcon]="'w-5 mr-3'">
+</app-button>
+

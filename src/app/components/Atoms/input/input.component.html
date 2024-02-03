@@ -1,0 +1,8 @@
+@if (icon !== '') {
+  <div [className]="classesDiv">
+    <img [src]="icon" alt="" srcset="" [className]="classesIcon">
+    <input [type]="type" [placeholder]="placeholder" [className]="classesInput">
+  </div>
+} @else {
+  <input [type]="type" [className]="classesInput" [placeholder]="placeholder">
+}

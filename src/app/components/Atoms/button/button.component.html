@@ -1,0 +1,8 @@
+@if (icon !== '') {
+    <button [className]="classesButton">
+        <img [src]="icon" [className]="classesIcon" alt="">
+        {{ text }}
+    </button>
+} @else {
+    <button [className]="classesButton">{{ text }}</button>
+}
