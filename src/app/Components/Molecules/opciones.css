@@ -1,0 +1,43 @@
+.opcion{
+  color: #A7A7A7;
+  justify-content: start;
+  gap: 10px;
+  padding-top: 30px;
+  padding-left: 28px;
+  font-size: 18px;
+}
+
+.opcion-activa{
+  color: white;
+  font-weight: bold;
+}
+.opcion > div{
+  fill: #A7A7A7 !important;
+}
+
+.background{
+  height: 56px;
+  width: 235px;
+  background-color: #c4c4c441;
+  position: absolute;
+  left: 0;
+  border-radius: 0 35px 35px 0;
+}
+
+.circulo{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  align-self:flex-end;
+  position: absolute;
+  right: 16px;
+  top: 9px;
+  justify-self: center !important;
+}
+
+.arrow{
+  position: absolute;
+  top: 14px;
+  left: 189px;
+}

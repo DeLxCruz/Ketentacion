@@ -10,5 +10,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Ketentacion';
+  welcome = 'Hola';
+  tasks =[
+    'Aprender Angular',
+    "Mk no se",
+    "Mejor HTML"
+  ]
 }
