@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+        @for (column of columns; track $index) {
+          <th>{{ column }}</th>
+        }
+    </tr>
+  </thead>
+  <tbody>
+    @for (row of data | paginate: { itemsPerPage: pageSize, currentPage: page }; track $index) {
+      <tr>
+        @for (column of columns; track $index) {
+            <td>{{ row[column] }}</td>
+        }
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="page = $event" previousLabel="Atras" nextLabel="Next"></pagination-controls>
