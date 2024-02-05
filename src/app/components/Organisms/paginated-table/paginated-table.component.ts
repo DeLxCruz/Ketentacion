@@ -13,4 +13,5 @@ export class PaginatedTableComponent {
   @Input() columns: string[] = [];
   @Input() data: any[] = [];
   @Input() pageSize: number = 1;
+  
 }
