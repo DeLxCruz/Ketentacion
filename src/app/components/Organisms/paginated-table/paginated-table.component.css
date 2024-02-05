@@ -1,0 +1,11 @@
+.pagination-btn ::ng-deep .ngx-pagination .current {
+  background-color: #342D2D;
+  padding: .35rem 1.15rem;
+  color: white;
+}
+
+.pagination-btn ::ng-deep .ngx-pagination a {
+  color: black;
+  border-color: black;
+  padding: .35rem 1.15rem;
+}

@@ -6,6 +6,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   standalone: true,
   imports: [NgxPaginationModule],
   templateUrl: './paginated-table.component.html',
+  styleUrls: ['./paginated-table.component.css']
 })
 export class PaginatedTableComponent {
   public page!: number;
@@ -13,5 +14,4 @@ export class PaginatedTableComponent {
   @Input() columns: string[] = [];
   @Input() data: any[] = [];
   @Input() pageSize: number = 1;
-  
 }
