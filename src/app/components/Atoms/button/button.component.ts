@@ -11,7 +11,7 @@ export class ButtonComponent {
   @Input() icon: string = '';
   @Input() classesButton: string = '';
   @Input() classesIcon: string = '';
-  @Input({required: true}) text: string = '';
+  @Input() text: string = '';
 
   constructor() {}
   ngOnInit() {}

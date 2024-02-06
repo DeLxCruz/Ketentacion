@@ -1,16 +1,16 @@
-<table>
-  <thead>
-    <tr>
+<table [className]="classTable">
+  <thead [className]="classThead">
+    <tr [className]="classTrThead">
         @for (column of columns; track $index) {
-          <th>{{ column }}</th>
+          <th [className]="classTh">{{ column }}</th>
         }
     </tr>
   </thead>
-  <tbody>
+  <tbody [className]="classTbody">
     @for (row of data  ; track $index) {
-      <tr>
+      <tr [className]="classTr">
         @for (column of columns; track $index) {
-          <td>{{ row[column] }}</td>
+          <td [className]="classTd">{{ row[column] }}</td>
         }
       </tr>
     }

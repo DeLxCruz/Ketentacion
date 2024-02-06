@@ -1,47 +1,24 @@
+<app-sidebar></app-sidebar>
+
 <h1 class="text-3xl font-extrabold underline bg-green-600">
   Hola Carepicha!
   hola x2
 </h1>
 
-<app-title title="Inventario" customClasses="font-bold pl-2 text-4xl "/>
-<app-input
-  icon="https://www.svgrepo.com/show/532555/search.svg"
-  placeholder="Buscar"
+<app-title title="Inventario" customClasses="font-bold pl-2 text-4xl " />
+<app-input icon="https://www.svgrepo.com/show/532555/search.svg" placeholder="Buscar"
   [classesDiv]="'flex py-1 pl-2 pr-5 w-fit rounded-lg shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
-  [classesIcon]="'mx-3 w-4'"
-  [classesInput]="'ml-3 py-1 focus:outline-none'">
+  [classesIcon]="'mx-3 w-4'" [classesInput]="'ml-3 py-1 focus:outline-none'">
 </app-input>
 
-<app-button
-  icon="https://www.svgrepo.com/show/524226/add-circle.svg"
-  text="Agregar Item"
+<app-button [icon]="'https://www.svgrepo.com/show/524226/add-circle.svg'" [text]="'Hola'"
   [classesButton]="'px-3 py-2 flex items-center bg-green-600 text-white py-1 px-3 rounded-md shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
   [classesIcon]="'w-5 mr-3'">
 </app-button>
 
-<app-paginated-table
-  [columns]="['Nombre', 'Codigo', 'Tipo', 'Precio', 'Cantidad']"
-  [data]="data"
-  [pageSize]="3">
+<app-paginated-table [columns]="['Nombre', 'Codigo', 'Tipo', 'Precio', 'Cantidad']" [data]="data" [pageSize]="3">
 </app-paginated-table>
 
-
-<button class="bg-gray-300 rounded-md text-black shadow-md py-3 px-5" (click)="toggleModal()">Click Papito</button>
-@if (modalVisible) {
-  <div class="fixed left-0 top-0 bg-black bg-opacity-30 w-screen h-screen flex justify-center items-center">
-    <div class="bg-white rounded shadow-md p-8 w-[35%] flex flex-col">
-      <app-title title="Factura" customClasses="font-bold pl-2 text-4xl "/>
-      <app-table [columns]="['Producto', 'Precio', 'Cantidad', 'Total']"
-      [data]="data2"></app-table>
-
-      <button (click)="toggleModal()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-      </button>
-    </div>
-  </div>
-}
-
+<app-invoice-modal></app-invoice-modal>
 
 

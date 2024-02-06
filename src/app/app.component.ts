@@ -6,6 +6,8 @@ import { InputComponent } from './components/Atoms/input/input.component';
 import { ButtonComponent } from './components/Atoms/button/button.component';
 import { PaginatedTableComponent } from './components/Organisms/paginated-table/paginated-table.component';
 import { TableComponent } from './components/Molecules/table/table.component';
+import { InvoiceModalComponent } from './components/Organisms/invoice-modal/invoice-modal.component';
+import { SidebarComponent } from './components/Organisms/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,8 @@ import { TableComponent } from './components/Molecules/table/table.component';
     ButtonComponent,
     PaginatedTableComponent,
     TableComponent,
+    InvoiceModalComponent,
+    SidebarComponent
   ],
   templateUrl: './app.component.html',
 })

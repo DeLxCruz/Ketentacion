@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-invoice-modal',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './invoice-modal.component.html',
 })
 export class InvoiceModalComponent {
+  @ViewChild('myModal1') myModal1!: HTMLDialogElement;
 
+  openModal() {
+    this.myModal1.showModal();
+  }
 }

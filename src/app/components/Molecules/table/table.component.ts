@@ -9,4 +9,11 @@ import { Component, Input } from '@angular/core';
 export class TableComponent {
   @Input() columns: string[] = [];
   @Input() data: any[] = [];
+  @Input() classTable: string = '';
+  @Input() classTd: string = '';
+  @Input() classTh: string = '';
+  @Input() classTrThead: string = '';
+  @Input() classTr: string = '';
+  @Input() classThead: string = '';
+  @Input() classTbody: string = '';
 }
