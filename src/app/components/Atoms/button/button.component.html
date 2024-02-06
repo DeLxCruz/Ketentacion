@@ -1,0 +1,17 @@
+@if (icon !== '' && text !== '') {
+<button [className]="classesButton">
+  <img [src]="icon" [className]="classesIcon" alt="">
+  {{ text }}
+</button>
+}
+@if (icon !== '' && text === '') {
+<button [className]="classesButton">
+  <img [src]="icon" [className]="classesIcon" alt="">
+</button>
+}
+@if (icon === '' && text !== '') {
+<button [className]="classesButton">
+  {{ text }}
+</button>
+}
+

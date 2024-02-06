@@ -1,0 +1,19 @@
+<table [className]="classTable">
+  <thead [className]="classThead">
+    <tr [className]="classTrThead">
+        @for (column of columns; track $index) {
+          <th [className]="classTh">{{ column }}</th>
+        }
+    </tr>
+  </thead>
+  <tbody [className]="classTbody">
+    @for (row of data  ; track $index) {
+      <tr [className]="classTr">
+        @for (column of columns; track $index) {
+          <td [className]="classTd">{{ row[column] }}</td>
+        }
+      </tr>
+    }
+  </tbody>
+</table>
+

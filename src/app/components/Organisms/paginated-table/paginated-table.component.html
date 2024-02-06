@@ -1,0 +1,35 @@
+<table class="ml-6 border-collapse">
+  <thead class="bg-[#F4F5FC]">
+    <tr>
+        @for (column of columns; track $index) {
+          <th class="py-3 px-12 text-[#5C6F88]">{{ column }}</th>
+        }
+    </tr>
+  </thead>
+  <tbody>
+    @for (row of data | paginate: { itemsPerPage: pageSize, currentPage: page }; track $index) {
+      <tr class="text-pretty">
+        @for (column of columns; track $index) {
+            @if ($index === 0) {
+              <td class="bg-[#5c5d63] py-8 px-12
+              rounded-l-2xl border-y-[1rem] border-white">{{ row[column] }}</td>
+            }
+            @else if ($index === columns.length - 1) {
+              <td class="bg-[#5c5d63] py-8 px-12
+              rounded-r-2xl border-y-[1rem] border-white">{{ row[column] }}</td>
+            }
+            @else {
+              <td class="bg-[#5c5d63] py-8 px-12 border-y-[1rem] border-white">{{ row[column] }}</td>
+            }
+        }
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pagination-controls
+  (pageChange)="page = $event"
+  previousLabel=""
+  nextLabel=""
+  class="pagination-btn">
+</pagination-controls>
