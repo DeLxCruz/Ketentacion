@@ -1,13 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SidebarComponent } from '../../Organisms/SideBar/sidebar.component'
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+    selector: 'app-dashboard',
+    standalone: true,
+    templateUrl: './dashboard.component.html',
+    styleUrl: './dashboard.component.css',
+    imports: [CommonModule, SidebarComponent]
 })
 export class DashboardComponent {
   elements = signal([
@@ -50,4 +51,6 @@ export class DashboardComponent {
   sanitize(html: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
+
+  currentPage = 'Dashboard';
 }

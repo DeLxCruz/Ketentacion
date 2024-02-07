@@ -5,7 +5,7 @@ import { BackUpComponent } from './Components/pages/back-up/back-up.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     component:DashboardComponent
   },
   {
