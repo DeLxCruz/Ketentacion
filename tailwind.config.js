@@ -6,7 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors :{
-        'yellow-bright': '#F5D75E'
+        'yellow-bright': '#F5D75E',
+        'background': '#F5F6F8',
+        'button': 'rgb(255, 230, 130)'
+      },
+      height:{
+        '18':'76px'
       }
     },
   },

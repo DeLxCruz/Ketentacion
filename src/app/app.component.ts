@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { TitleComponent } from './Components/Atoms/title/title.component';
-import { InputComponent } from './Components/Atoms/input/input.component';
-import { ButtonComponent } from './Components/Atoms/button/button.component';
-import { PaginatedTableComponent } from './Components/Organisms/paginated-table/paginated-table.component';
-import { TableComponent } from './Components/Molecules/table/table.component';
-import { InvoiceModalComponent } from './Components/Organisms/invoice-modal/invoice-modal.component';
-import { SidebarComponent } from './Components/Organisms/SideBar/sidebar.component';
+import { TitleComponent } from './components/Atoms/title/title.component';
+import { InputComponent } from './components/Atoms/input/input.component';
+import { ButtonComponent } from './components/Atoms/button/button.component';
+import { PaginatedTableComponent } from './components/Organisms/paginated-table/paginated-table.component';
+import { TableComponent } from './components/Molecules/table/table.component';
+import { InvoiceModalComponent } from './components/Organisms/invoice-modal/invoice-modal.component';
+import { SidebarComponent } from './components/Organisms/SideBar/sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -115,4 +115,6 @@ export class AppComponent {
   toggleModal() {
     this.modalVisible = !this.modalVisible;
   }
+
+  currentPage = 'Dashboard';
 }
