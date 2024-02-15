@@ -1,24 +1,63 @@
-<app-sidebar></app-sidebar>
 
-<h1 class="text-3xl font-extrabold underline bg-green-600">
-  Hola Carepicha!
-  hola x2
-</h1>
-
-<app-title title="Inventario" customClasses="font-bold pl-2 text-4xl " />
-<app-input icon="https://www.svgrepo.com/show/532555/search.svg" placeholder="Buscar"
-  [classesDiv]="'flex py-1 pl-2 pr-5 w-fit rounded-lg shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
-  [classesIcon]="'mx-3 w-4'" [classesInput]="'ml-3 py-1 focus:outline-none'">
-</app-input>
-
-<app-button [icon]="'https://www.svgrepo.com/show/524226/add-circle.svg'" [text]="'Hola'"
-  [classesButton]="'px-3 py-2 flex items-center bg-green-600 text-white py-1 px-3 rounded-md shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
-  [classesIcon]="'w-5 mr-3'">
-</app-button>
-
-<app-paginated-table [columns]="['Nombre', 'Codigo', 'Tipo', 'Precio', 'Cantidad']" [data]="data" [pageSize]="3">
-</app-paginated-table>
-
-<app-invoice-modal></app-invoice-modal>
+<router-outlet> </router-outlet>
 
 
+<!--
+<div class="flex h-full gap-6">
+  <app-sidebar></app-sidebar>
+  <div>
+    <app-title title="Inventario" customClasses="font-bold pl-2 text-4xl" />
+    <app-input icon="https://www.svgrepo.com/show/532555/search.svg" placeholder="Buscar"
+      [classesDiv]="'flex py-1 pl-2 pr-5 w-fit rounded-lg shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
+      [classesIcon]="'mx-3 w-4'" [classesInput]="'ml-3 py-1 focus:outline-none'">
+    </app-input>
+
+    <app-button [icon]="'https://www.svgrepo.com/show/524226/add-circle.svg'" [text]="'Hola'"
+      [classesButton]="'px-3 py-2 flex items-center bg-green-600 text-white py-1 px-3 rounded-md shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40'"
+      [classesIcon]="'w-5 mr-3'">
+    </app-button>
+
+    <app-paginated-table [columns]="['Nombre', 'Codigo', 'Tipo', 'Precio', 'Cantidad']" [data]="data" [pageSize]="3">
+    </app-paginated-table>
+
+    <app-invoice-modal></app-invoice-modal>
+  </div>
+</div>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./Components/Molecules/opciones.css">
+</head>
+<body>
+    <main class="main-container bg-background">
+      <div class="flex h-full">
+        <app-sidebar [currentPage]="currentPage"></app-sidebar>
+        <div class="grid grid-cols-10 h-full w-full">
+          <div class="col-span-7 pr-3">
+            <div class="flex flex-col gap-4 h-full">
+              <div class="w-full border-2 h-18 rounded-br-lg bg-white flex items-center px-7 justify-between">
+                <app-input placeholder="Buscar"
+                [classesInput]="'pl-3 h-10 max-w-80 shadow-md hover:shadow-black/20 rounded-md'"
+                ></app-input>
+                <app-button [icon]="'../assets/Images/plus-regular-24.png'"
+                [text]="'Agregar'"
+                [classesButton]="'px-3 py-2 flex items-center bg-button py-1 px-3 rounded-md shadow-[2px_2px_12px_-2px_rgba(0,0,0,0.3)] shadow-black-500/40 h-9 min-w-32'"
+                [classesIcon]="'w-5 mr-3'"
+                > </app-button>
+              </div>
+              <app-title title="Dashboard" customClasses="font-bold pl-2 text-lg pl-7"></app-title>
+            </div>
+          </div>
+          <div class="col-span-3 border-2 border-black">
+            holaaa
+          </div>
+        </div>
+      </div>
+    </main>
+</body>
+</html>

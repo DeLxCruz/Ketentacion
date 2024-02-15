@@ -7,7 +7,7 @@ import { ButtonComponent } from './components/Atoms/button/button.component';
 import { PaginatedTableComponent } from './components/Organisms/paginated-table/paginated-table.component';
 import { TableComponent } from './components/Molecules/table/table.component';
 import { InvoiceModalComponent } from './components/Organisms/invoice-modal/invoice-modal.component';
-import { SidebarComponent } from './components/Organisms/sidebar/sidebar.component';
+import { SidebarComponent } from './components/Organisms/SideBar/sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -116,4 +116,5 @@ export class AppComponent {
     this.modalVisible = !this.modalVisible;
   }
 
+  currentPage = 'Dashboard';
 }

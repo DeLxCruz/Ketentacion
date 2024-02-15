@@ -1,17 +1,32 @@
-<div class="drawer lg:drawer-open">
-  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content flex flex-col items-center justify-center">
-    <!-- Page content here -->
-    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+<link rel="stylesheet" href="../../Molecules/opciones.css">
 
+<aside class="w-80 ">
+  <div>
+    <div class="flex">
+      <img src="../../../assets/Images/WhatsApp_Image_2024-02-02_at_21.39.26_ffe65403-removebg-preview.png" alt="" class="w-14">
+      <app-title-ketentacion title="Ketentacion" customClasses=""></app-title-ketentacion>
+    </div>
+      <div class="opcion flex mt-1 cursor-pointer	" *ngFor="let item of elements()" [class.opcion-activa]="item.name == currentPage" [routerLink]="getRoute(item)">
+        <div [innerHTML]="sanitize(item.imagen)" [class.active]="item.name == currentPage "></div>
+        <p>{{item.name}}</p>
+        <div class="background" *ngIf="item.name == currentPage">
+          <div class="circulo"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(0, 0, 0);" class="arrow"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+        </div>
+      </div>
   </div>
-  <div class="drawer-side">
-    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-
+  <div class="perfil absolute bottom-10 h-32 flex flex-col w-64">
+    <hr class="w-56 mb-4">
+    <div class="perfil-info flex gap-4">
+      <img class="foto-perfil" src="../../../assets/Images/Best-Programmer-Productivity-Tools.jpg" alt="" class="w-14 rounded-full">
+      <div>
+        <p class="text-white">Daniel Diaz</p>
+        <p style="color: #A7A7A7; font-size: 11px;">Programador</p>
+      </div>
+    </div>
+    <app-button [text]="'Log Out'" [icon]="'../../../../assets/Images/log-out-regular-24.png'"
+      [classesButton]="'flex bg-yellow-bright h-7 w-28 rounded font-bold gap-2 text-sm self-end mt-4 ml-20 items-center justify-center'"
+      [classesIcon]="'w-6 h-6'"
+    ></app-button>
   </div>
-</div>
+</aside>
